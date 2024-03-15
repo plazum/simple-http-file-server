@@ -20,14 +20,10 @@ print('<title>上传文件</title>')
 print('</head>')
 print('<body>')
 print('<h2>上传文件</h2>')
-b = sys.stdin.buffer.read()
-c = bytes('Content-Type: ' + os.environ['CONTENT_TYPE'] + '\r\n\r\n', encoding='utf-8')
-b = c + b
-# content = email.message_from_binary_file(sys.stdin.buffer, policy=email.policy.HTTP)
-content = email.message_from_bytes(b, policy=email.policy.HTTP)
-# f = open(r'D:\projects\test\upload\rufus.ini', mode='w')
-# f.write('aaa')
-# f.close()
+body = sys.stdin.buffer.read()
+header = bytes('Content-Type: ' + os.environ['CONTENT_TYPE'] + '\r\n\r\n', encoding='utf-8')
+multipart_form_data = header + body
+content = email.message_from_bytes(multipart_form_data, policy=email.policy.HTTP)
 for x in content.iter_parts():
     basename = os.path.basename(x.get_filename())
     if os.path.exists(upload_dir + basename):
