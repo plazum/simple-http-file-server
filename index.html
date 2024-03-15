@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>上传文件</title>
+</head>
+<body>
+  <div>
+    <h2>上传文件</h2>
+    <form action="cgi-bin/upload.py" method="post" enctype="multipart/form-data">
+      <input type="file" id="file" name="file" multiple required><br>
+      <button>上传</button>
+    </form>
+    <p>
+      <a href="cgi-bin/file-manager.py">文件管理</a>
+    </p>
+  </div>
+</body>
+</html>
