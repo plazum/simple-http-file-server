@@ -44,12 +44,11 @@ print('</tbody></table>')
 print('<br><button>删除选中文件</button>')
 print('</form>')
 if len(deleted) != 0:
-    print('<p>以下文件已删除：', deleted, '</p>', sep='')
+    print(f'<p>以下文件已删除：{deleted}</p>')
 if len(non_existent) != 0:
-    print('<p>以下文件不存在，无需删除：', non_existent, '</p>', sep='')
+    print(f'<p>以下文件不存在，无需删除：{non_existent}</p>')
 print('<p><a href="../index.html">上传文件</a></p>')
 if query != '':
-    print('<details><p>', query, '</p></details>')
-print('')
+    print(f'<details><p>{query}</p></details>')
 print('</body>')
 print('</html>')
