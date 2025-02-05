@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import cgitb
 import codecs
 import email.policy
@@ -10,8 +12,8 @@ if not os.path.lexists(upload_dir):
     os.mkdir(upload_dir)
 # sys.excepthook = lambda exception_type, value, tb: print('<p>', html.escape(str(exception_type)), '<br>', value, '<br>', html.escape(str(tb)), '</p></body></html>')
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
-print('Content-type: text/html; charset=utf-8')
-print()  # 空行，告诉服务器结束头部
+print('Content-type: text/html; charset=utf-8', end='\r\n')
+print(end='\r\n')  # 空行，告诉服务器结束头部
 print('<!DOCTYPE html>')
 print('<html lang="zh">')
 print('<head>')
