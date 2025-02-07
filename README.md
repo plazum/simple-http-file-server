@@ -20,7 +20,7 @@ python -m http.server --cgi
   chmod g+x cgi-bin/*.py
   ```
 
-- 脚本依赖于内置的`cgi`和`cgitb`模块，这两个模块在Python 3.13中移除（(详情)[https://docs.python.org/zh-cn/3/whatsnew/3.13.html#removed-modules-and-apis]），可安装(legacy-cgi)[https://pypi.org/project/legacy-cgi/]作为替代（未经测试）。
+- 脚本依赖于内置的`cgi`和`cgitb`模块，这两个模块在Python 3.13中移除（[详情](https://docs.python.org/zh-cn/3/whatsnew/3.13.html#removed-modules-and-apis)），可安装[`legacy-cgi`](https://pypi.org/project/legacy-cgi/)作为替代（未经测试）。
 
 ## 代码说明
 
