@@ -26,4 +26,4 @@ python -m http.server --cgi
 
 - `index.html`：首页，可以上传文件。
 - `cgi-bin/upload.py`：处理文件上传逻辑。
-- `cgi-bin/file-manager.py`：展示已上传的文件（upload目录下的文件），可以用浏览器访问和下载文件，可以删除指定的文件。
+- `cgi-bin/file-manager.py`：展示已上传的文件（`upload`目录下的文件），可以用浏览器访问和下载文件，可以删除指定的文件。
